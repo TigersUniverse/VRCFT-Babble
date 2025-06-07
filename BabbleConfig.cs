@@ -9,8 +9,8 @@ public static class BabbleConfig
 
 	public static Config GetBabbleConfig()
 	{
-		string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
-		string path = Path.Combine(directoryName, "BabbleConfig.json");
+      string directoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+		string path = Path.Combine(directoryName, BabbleConfigFile);
 		if(!File.Exists(path)) File.WriteAllText(path, JsonConvert.SerializeObject(new Config
 		{
 			Host = BabbleOSC.DEFAULT_HOST,

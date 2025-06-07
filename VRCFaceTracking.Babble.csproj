@@ -13,6 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="VRCFaceTracking\**" />
+    <EmbeddedResource Remove="VRCFaceTracking\**" />
+    <None Remove="VRCFaceTracking\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="BabbleLogo.png" />
     <Content Include="VRCFaceTracking.Babble.csproj.user" />
   </ItemGroup>
@@ -46,7 +52,7 @@
     <Reference Include="VRCFaceTracking.Core">
       <HintPath>$(VRCFaceTrackingBuild)\net481\VRCFaceTracking.Core.dll</HintPath>
     </Reference>
-    <Reference Include="VRCFaceTracking.Core">
+    <Reference Include="VRCFaceTracking.SDK">
       <HintPath>$(VRCFaceTrackingBuild)\net481\VRCFaceTracking.SDK.dll</HintPath>
     </Reference>
   </ItemGroup>
